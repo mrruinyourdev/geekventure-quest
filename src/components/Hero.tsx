@@ -22,12 +22,6 @@ export function Hero() {
       {/* Content */}
       <div className="container relative z-10 px-4">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 backdrop-blur-sm">
-            <Sparkles className="h-4 w-4 text-primary animate-glow-pulse" />
-            <span className="text-sm font-medium text-primary">Luxury Tour</span>
-          </div>
-
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
@@ -39,7 +33,8 @@ export function Hero() {
 
           {/* Subheadline */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Experience exclusive gaming conventions, esports tournaments, and fan meets with VIP all-inclusive packages
+            Experience exclusive gaming conventions, esports tournaments, and
+            fan meets with VIP all-inclusive packages
           </p>
 
           {/* CTA Buttons */}
@@ -59,11 +54,15 @@ export function Hero() {
           <div className="grid grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
             <div className="space-y-1">
               <div className="text-3xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground">Tours Available</div>
+              <div className="text-sm text-muted-foreground">
+                Tours Available
+              </div>
             </div>
             <div className="space-y-1">
               <div className="text-3xl font-bold text-secondary">15K+</div>
-              <div className="text-sm text-muted-foreground">Happy Travelers</div>
+              <div className="text-sm text-muted-foreground">
+                Happy Travelers
+              </div>
             </div>
             <div className="space-y-1">
               <div className="text-3xl font-bold text-accent">20+</div>

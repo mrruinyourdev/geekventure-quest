@@ -3,17 +3,19 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import tourCosplay from "@/assets/tour-cosplay.jpg";
-import tourEsports from "@/assets/paris.png";
-import tourFanmeet from "@/assets/tour-fanmeet.jpg";
-import tourThemepark from "@/assets/tour-themepark.jpg";
+import tourValorant from "@/assets/tour-valorant.jpg";
+import tourLOL from "@/assets/tour-lol.jpg";
+import tourTemy from "@/assets/tour-temy.jpg";
+import tourHunterXhunter from "@/assets/tour-hunterxhunter.jpg";
+import tourAnime from "@/assets/tour-anime.jpg";
+import tourMinecraft from "@/assets/tour-minecraft.jpg";
 
 const tours = [
   {
     id: 1,
-    image: tourCosplay,
-    title: "Tokyo Game Show VIP Experience",
-    type: "Convention",
+    image: tourValorant,
+    title: "Valorant Champions Tour Finals",
+    type: "Esports",
     location: "Tokyo, Japan",
     date: "Sept 21-24, 2025",
     price: "$2,499",
@@ -22,10 +24,10 @@ const tours = [
   },
   {
     id: 2,
-    image: tourEsports,
-    title: "VALORANT Champion 2025 Paris ",
+    image: tourLOL,
+    title: "LOL Champions Tour Finals",
     type: "Esports",
-    location: "Paris, France",
+    location: "Seoul, South Korea",
     date: "Nov 2-5, 2025",
     price: "$3,299",
     spots: "5 spots left",
@@ -33,8 +35,8 @@ const tours = [
   },
   {
     id: 3,
-    image: tourFanmeet,
-    title: "Creator Fan Fest Premium",
+    image: tourTemy,
+    title: "Temy Fan Meet Experience",
     type: "Fan Meet",
     location: "Los Angeles, USA",
     date: "Aug 15-18, 2025",
@@ -44,9 +46,9 @@ const tours = [
   },
   {
     id: 4,
-    image: tourThemepark,
-    title: "Nintendo World Adventure",
-    type: "Theme Park",
+    image: tourHunterXhunter,
+    title: "Hunter x Hunter World Tour",
+    type: "Fan Meet",
     location: "Orlando, Florida",
     date: "Oct 10-14, 2025",
     price: "$2,199",
@@ -75,7 +77,11 @@ export function FeaturedTours() {
               className="overflow-hidden border-border/50 bg-card/50 backdrop-blur-sm hover:border-primary/50 transition-all hover:scale-105 hover:glow-primary group"
             >
               <div className="relative h-48 overflow-hidden">
-                <img src={tour.image} alt={tour.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                <img
+                  src={tour.image}
+                  alt={tour.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                />
                 <div className="absolute top-3 right-3">
                   <Badge variant="secondary" className="font-semibold">
                     {tour.type}
@@ -85,7 +91,9 @@ export function FeaturedTours() {
               </div>
 
               <CardContent className="p-5 space-y-4">
-                <h3 className="text-lg font-bold leading-tight line-clamp-2">{tour.title}</h3>
+                <h3 className="text-lg font-bold leading-tight line-clamp-2">
+                  {tour.title}
+                </h3>
 
                 <div className="space-y-2 text-sm text-muted-foreground">
                   <div className="flex items-center gap-2">
@@ -98,7 +106,9 @@ export function FeaturedTours() {
                   </div>
                   <div className="flex items-center gap-2">
                     <Users className="h-4 w-4 text-accent" />
-                    <span className="text-accent font-medium">{tour.spots}</span>
+                    <span className="text-accent font-medium">
+                      {tour.spots}
+                    </span>
                   </div>
                 </div>
 
@@ -113,8 +123,12 @@ export function FeaturedTours() {
 
               <CardFooter className="p-5 pt-0 flex items-center justify-between">
                 <div className="space-y-1">
-                  <div className="text-xs text-muted-foreground">Starting from</div>
-                  <div className="text-2xl font-bold text-primary">{tour.price}</div>
+                  <div className="text-xs text-muted-foreground">
+                    Starting from
+                  </div>
+                  <div className="text-2xl font-bold text-primary">
+                    {tour.price}
+                  </div>
                 </div>
                 <Button asChild variant="default" size="sm">
                   <Link to={`/tours/${tour.id}`}>

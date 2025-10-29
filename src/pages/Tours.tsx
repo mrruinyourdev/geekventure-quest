@@ -6,17 +6,19 @@ import { Input } from "@/components/ui/input";
 import { Calendar, MapPin, Users, ArrowRight, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import tourCosplay from "@/assets/tour-cosplay.jpg";
-import tourEsports from "@/assets/tour-esports.jpg";
-import tourFanmeet from "@/assets/tour-fanmeet.jpg";
-import tourThemepark from "@/assets/tour-themepark.jpg";
 
+import tourValorant from "@/assets/tour-valorant.jpg";
+import tourLOL from "@/assets/tour-lol.jpg";
+import tourTemy from "@/assets/tour-temy.jpg";
+import tourHunterXhunter from "@/assets/tour-hunterxhunter.jpg";
+import tourAnime from "@/assets/tour-anime.jpg";
+import tourMinecraft from "@/assets/tour-minecraft.jpg";
 const allTours = [
   {
     id: 1,
-    image: tourCosplay,
-    title: "Tokyo Game Show VIP Experience",
-    type: "Convention",
+    image: tourValorant,
+    title: "Valorant Champions Tour Finals",
+    type: "Esports",
     location: "Tokyo, Japan",
     date: "Sept 21-24, 2025",
     price: "$2,499",
@@ -25,8 +27,8 @@ const allTours = [
   },
   {
     id: 2,
-    image: tourEsports,
-    title: "Worlds Championship Finals",
+    image: tourLOL,
+    title: "LOL Champions Tour Finals",
     type: "Esports",
     location: "Seoul, South Korea",
     date: "Nov 2-5, 2025",
@@ -36,8 +38,8 @@ const allTours = [
   },
   {
     id: 3,
-    image: tourFanmeet,
-    title: "Creator Fan Fest Premium",
+    image: tourTemy,
+    title: "Temy Fan Meet Experience",
     type: "Fan Meet",
     location: "Los Angeles, USA",
     date: "Aug 15-18, 2025",
@@ -47,9 +49,9 @@ const allTours = [
   },
   {
     id: 4,
-    image: tourThemepark,
-    title: "Nintendo World Adventure",
-    type: "Theme Park",
+    image: tourHunterXhunter,
+    title: "Hunter x Hunter World Tour",
+    type: "Fan Meet",
     location: "Orlando, Florida",
     date: "Oct 10-14, 2025",
     price: "$2,199",
@@ -58,7 +60,7 @@ const allTours = [
   },
   {
     id: 5,
-    image: tourCosplay,
+    image: tourAnime,
     title: "Anime Expo Complete Package",
     type: "Convention",
     location: "Los Angeles, USA",
@@ -69,8 +71,8 @@ const allTours = [
   },
   {
     id: 6,
-    image: tourEsports,
-    title: "The International Dota 2",
+    image: tourMinecraft,
+    title: "Minecraft Championship Tour Finals",
     type: "Esports",
     location: "Singapore",
     date: "Oct 12-27, 2025",
@@ -106,7 +108,8 @@ export default function Tours() {
               Explore <span className="text-primary">Epic Tours</span>
             </h1>
             <p className="text-lg text-muted-foreground">
-              Find your perfect gaming adventure from our curated collection of exclusive event experiences
+              Find your perfect gaming adventure from our curated collection of
+              exclusive event experiences
             </p>
 
             {/* Search Bar */}
@@ -147,7 +150,9 @@ export default function Tours() {
         <div className="container">
           {filteredTours.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground">No tours found matching your criteria</p>
+              <p className="text-xl text-muted-foreground">
+                No tours found matching your criteria
+              </p>
             </div>
           ) : (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -171,7 +176,9 @@ export default function Tours() {
                   </div>
 
                   <CardContent className="p-5 space-y-4">
-                    <h3 className="text-lg font-bold leading-tight line-clamp-2">{tour.title}</h3>
+                    <h3 className="text-lg font-bold leading-tight line-clamp-2">
+                      {tour.title}
+                    </h3>
 
                     <div className="space-y-2 text-sm text-muted-foreground">
                       <div className="flex items-center gap-2">
@@ -184,7 +191,9 @@ export default function Tours() {
                       </div>
                       <div className="flex items-center gap-2">
                         <Users className="h-4 w-4 text-accent" />
-                        <span className="text-accent font-medium">{tour.spots}</span>
+                        <span className="text-accent font-medium">
+                          {tour.spots}
+                        </span>
                       </div>
                     </div>
 
@@ -199,8 +208,12 @@ export default function Tours() {
 
                   <CardFooter className="p-5 pt-0 flex items-center justify-between">
                     <div className="space-y-1">
-                      <div className="text-xs text-muted-foreground">Starting from</div>
-                      <div className="text-2xl font-bold text-primary">{tour.price}</div>
+                      <div className="text-xs text-muted-foreground">
+                        Starting from
+                      </div>
+                      <div className="text-2xl font-bold text-primary">
+                        {tour.price}
+                      </div>
                     </div>
                     <Button asChild variant="default" size="sm">
                       <Link to={`/tours/${tour.id}`}>
