@@ -1,12 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { ValueProposition } from "@/components/ValueProposition";
+import { FeaturedTours } from "@/components/FeaturedTours";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header />
+      <main>
+        <Hero />
+        <ValueProposition />
+        <FeaturedTours />
+      </main>
+      <footer className="border-t border-border/40 py-12 px-4 mt-24">
+        <div className="container text-center text-sm text-muted-foreground">
+          <p className="mb-2">
+            &copy; {new Date().getFullYear()} GEEKVENTURE TOURS. All rights reserved.
+          </p>
+          <p>Your gateway to epic gaming adventures worldwide.</p>
+        </div>
+      </footer>
     </div>
   );
 };
