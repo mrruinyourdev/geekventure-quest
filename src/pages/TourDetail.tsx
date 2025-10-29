@@ -4,18 +4,51 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, Clock, Star, CheckCircle2 } from "lucide-react";
 import { Link, useParams } from "react-router-dom";
-import tourEsports from "@/assets/tour-esports.jpg";
+import tourEsports from "@/assets/paris.png";
 
 export default function TourDetail() {
   const { id } = useParams();
 
   // In a real app, fetch tour data by ID
-  const tour = {
-    id: Number(id),
-    image: tourEsports,
-    title: "Worlds Championship Finals",
+  const tours = [
+  {
+    id: 1,
+    image: tourLOL,
+    title: "League of Legends Worlds 2025 Tokyo",
     type: "Esports",
-    location: "Seoul, South Korea",
+    location: "Tokyo, Japan",
+    date: "Oct 10-15, 2025",
+    duration: "6 Days / 5 Nights",
+    price: "$3,899",
+    spots: "8 spots left",
+    rating: 4.8,
+    reviews: 201,
+    description:
+      "Feel the hype of Worlds 2025 in Tokyo with premium arena access, exclusive fan experiences, and tours to top gaming districts like Akihabara and Shibuya.",
+    included: [
+      "Premium Worlds Finals Ticket",
+      "5-Night 4-Star Hotel Stay",
+      "Airport Transfers",
+      "Daily Breakfast & 2 Group Dinners",
+      "Tokyo Gaming Culture Tour",
+      "Exclusive Riot Merch Pack",
+      "Professional Tour Guide",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrival & Welcome", activities: ["Airport pickup", "Hotel check-in", "Akihabara night walk"] },
+      { day: 2, title: "Group Stage Day 1", activities: ["Breakfast", "Arena matches", "Free time"] },
+      { day: 3, title: "Sightseeing & Matches", activities: ["Shibuya & Harajuku tour", "Evening matches"] },
+      { day: 4, title: "Finals Day", activities: ["Finals ceremony", "Merch shopping", "Group celebration"] },
+      { day: 5, title: "Free Day", activities: ["Optional theme park", "Local food hunt"] },
+      { day: 6, title: "Departure", activities: ["Check-out", "Airport drop-off"] },
+    ],
+  },
+  {
+    id: 2,
+    image: tourEsports,
+    title: "VALORANT Champions 2025 Paris",
+    type: "Esports",
+    location: "Paris, France",
     date: "Nov 2-5, 2025",
     duration: "4 Days / 3 Nights",
     price: "$3,299",
@@ -23,41 +56,55 @@ export default function TourDetail() {
     rating: 4.9,
     reviews: 127,
     description:
-      "Experience the pinnacle of competitive gaming at the League of Legends World Championship Finals. This all-inclusive premium package includes VIP arena seating, exclusive team meet-and-greets, luxury accommodation, and guided tours of Seoul's gaming culture hotspots.",
+      "Be part of the most electrifying VALORANT event of the year with front-row VIP access, player meet-ups, and iconic Paris experiences.",
     included: [
-      "VIP Finals Ticket (Premium Seating)",
-      "3 Nights at 5-Star Hotel (Double Occupancy)",
-      "Daily Breakfast & Select Meals",
-      "Airport Transfers & Local Transportation",
-      "Professional Gaming Tour Guide",
-      "Exclusive Team Meet & Greet Session",
-      "Official Championship Merchandise",
-      "Photo Opportunities with Trophy",
+      "VIP Finals Ticket",
+      "3-Night 5-Star Hotel Stay",
+      "Daily Breakfast",
+      "Seine River Dinner Cruise",
+      "Pro Team Meet & Greet",
+      "Official Champs Merch",
     ],
     itinerary: [
-      {
-        day: 1,
-        title: "Arrival & Welcome",
-        activities: ["Airport pickup", "Hotel check-in", "Welcome dinner with group", "Evening Seoul gaming district tour"],
-      },
-      {
-        day: 2,
-        title: "Semifinals Day",
-        activities: ["Breakfast at hotel", "Pre-match VIP lounge access", "Semifinals matches (all day)", "Post-match analysis session"],
-      },
-      {
-        day: 3,
-        title: "Finals Day",
-        activities: ["Early breakfast", "VIP arena access", "Grand Finals match", "Team meet & greet", "Championship celebration"],
-      },
-      {
-        day: 4,
-        title: "Departure",
-        activities: ["Hotel checkout", "Optional shopping tour", "Airport transfer", "Farewell"],
-      },
+      { day: 1, title: "Welcome to Paris", activities: ["Check-in", "River cruise dinner"] },
+      { day: 2, title: "Arena Tour + Matches", activities: ["VIP lounge", "Group stage action"] },
+      { day: 3, title: "Grand Finals", activities: ["Finals match", "Ceremony show"] },
+      { day: 4, title: "Farewell", activities: ["Shopping", "Airport transfer"] },
     ],
-  };
+  },
+  {
+    id: 3,
+    image: tourDota,
+    title: "Dota 2 The International 2025 Seattle",
+    type: "Esports",
+    location: "Seattle, USA",
+    date: "Aug 18-23, 2025",
+    duration: "6 Days / 5 Nights",
+    price: "$4,150",
+    spots: "Only 2 spots left",
+    rating: 4.7,
+    reviews: 165,
+    description:
+      "Join the legendary hype of The International in its original hometown — Seattle. Enjoy behind-the-scenes access and exclusive fan experiences.",
+    included: [
+      "TI25 Playoff & Finals Tickets",
+      "5-Night Hotel near Climate Pledge Arena",
+      "City & Gaming Tours",
+      "DAL Merch Pack",
+      "Airport Transfers",
+    ],
+    itinerary: [
+      { day: 1, title: "Arrivals", activities: ["Check-in", "Fisherman's Wharf walk"] },
+      { day: 2, title: "Playoffs", activities: ["Matches all day", "Fan zone activities"] },
+      { day: 3, title: "Free Day", activities: ["Space Needle tour", "Dinner group"] },
+      { day: 4, title: "Finals Day", activities: ["The International Finals", "Celebration night"] },
+      { day: 5, title: "Valve HQ Visit", activities: ["Photo ops", "Exclusive Q&A"] },
+      { day: 6, title: "Departure", activities: ["Souvenir shopping", "Check-out"] },
+    ],
+  }
+];
 
+}
   return (
     <div className="min-h-screen bg-background">
       <Header />
@@ -211,4 +258,4 @@ export default function TourDetail() {
       </div>
     </div>
   );
-}
+

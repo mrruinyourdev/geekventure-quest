@@ -19,7 +19,7 @@ export function Header() {
         {/* Logo */}
         <Link to="/" className="flex items-center space-x-2 group">
           <span className="font-mono text-xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform">
-            GEEKVENTURE
+            GOONVENTURE
           </span>
         </Link>
 

@@ -4,7 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, MapPin, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import tourCosplay from "@/assets/tour-cosplay.jpg";
-import tourEsports from "@/assets/tour-esports.jpg";
+import tourEsports from "@/assets/paris.png";
 import tourFanmeet from "@/assets/tour-fanmeet.jpg";
 import tourThemepark from "@/assets/tour-themepark.jpg";
 
@@ -23,9 +23,9 @@ const tours = [
   {
     id: 2,
     image: tourEsports,
-    title: "Worlds Championship Finals",
+    title: "VALORANT Champion 2025 Paris ",
     type: "Esports",
-    location: "Seoul, South Korea",
+    location: "Paris, France",
     date: "Nov 2-5, 2025",
     price: "$3,299",
     spots: "5 spots left",

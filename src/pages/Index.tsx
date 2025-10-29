@@ -15,7 +15,7 @@ const Index = () => {
       <footer className="border-t border-border/40 py-12 px-4 mt-24">
         <div className="container text-center text-sm text-muted-foreground">
           <p className="mb-2">
-            &copy; {new Date().getFullYear()} GEEKVENTURE TOURS. All rights reserved.
+            &copy; {new Date().getFullYear()} GOONVENTURE TOURS. All rights reserved.
           </p>
           <p>Your gateway to epic gaming adventures worldwide.</p>
         </div>

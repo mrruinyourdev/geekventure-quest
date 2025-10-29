@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/aisle-blur.jpg";
 
 export function Hero() {
   return (
@@ -25,16 +25,16 @@ export function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/50 bg-primary/10 backdrop-blur-sm">
             <Sparkles className="h-4 w-4 text-primary animate-glow-pulse" />
-            <span className="text-sm font-medium text-primary">Premium Gaming & Entertainment Tours</span>
+            <span className="text-sm font-medium text-primary">Luxury Tour</span>
           </div>
 
           {/* Headline */}
           <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
             <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              GEEKVENTURE
+              GGTRIPS
             </span>
             <br />
-            <span className="text-foreground">Awaits</span>
+            <span className="text-foreground">มาเที่ยวกันเถอะพี่น้อง</span>
           </h1>
 
           {/* Subheadline */}
